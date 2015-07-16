@@ -1,0 +1,98 @@
+Viewing a diff between 2 versions of a file helps you see if a bug has
+been introduced by pinpointing the things in file 2 that are different
+from file 1.
+
+Therefore, if file 1 works but file 2 doesn't, one of these ways in which
+file 2 differs from file 1 must contain the bug.
+
+***
+
+Having easy access to the entire history of a file can make you more
+efficient programmer in the long term because:
+
+1. If you do something that introduces a bug, you can easily revert to
+the latest version prior to the introduction of the bug, saving a lot
+of time trying to hunt down your change and eliminate it.
+
+2. If you're working with someone on the same code, you can easily look
+back through changes they've made and pick up where they left off.
+
+3. You can have multiple acceptable implementations of the same thing,
+and easily switch back and forth between them by simply going back or
+forward to the appropriate point in the file history.
+
+***
+
+Here are some pros & cons of manually choosing when to create a commit
+(like you do in Git) vs. having versions automatically saved (like
+Google Docs does).
+
+Pros:
+1. Manual commits give you the control you need to create a history that
+makes logical sense, with each commit (version) representing a specific,
+self-contained functional or practical change that is small enough to
+understand easily.
+
+2. Manual commits make it easier to comprehend your versioning history,
+because every version will be due to a commit that you consciously chose
+to make -- therefore, you will have better recollection of your code
+history than if commits are created behind the scenes without your
+knowledge at random-seeming times.
+
+3. Manual commits make it easier to collaborate, because each one can be
+tied to a logical task. Therefore, it becomes easier to delegate and
+track responsibility.
+
+
+Cons:
+1. Manual commits put the burden on you to decide when it's time for a
+commit. You have to constantly think about whether now is the most
+logical time to do it.
+
+2. Manual commits present a challenge for collaboration in that different
+programmers could have reasonable differences over the best strategy for
+when to commit, and this will make the version history structure uneven.
+
+3. If you do a bunch of work and forget to do a commit, it'll be an
+immense pain to try to undo some of your work to the last logical commit-
+point and commit that, then re-include subsequent work and commit again.
+But if you don't do this, your commit will differ a great deal from the
+one before.
+
+***
+
+Some version control systems, like Git, allow saving multiple files in
+one commit while others, like Google Docs, treat each file separately
+because Git is specifically designed for programming, in which
+the implementation of one logically discrete feature is likely to
+involve the modification of multiple files in tandem. Google Docs
+does not bother with this, probably because keeping track of multiple
+files requires more storage.
+
+***
+
+You can use git log to view a history of every commit, including the
+message for each one explaining what was changed. Using git log --stat
+will include a list of files within the repository that was altered
+in a given commit.
+
+Then, you can use git diff to view the specific lines that were added and
+removed between 2 different commits. It will show you the differences in
+all the files that were altered between commits. The command takes 2
+parameters -- the ID of one commit & the ID of another commit to compare
+it against.
+
+***
+
+Using version control can make you more confident about making changes
+that could break something because version control easily allows you to
+return to a previous version before you introduced problematic changes.
+In Git, you can easily check out a previous commit using git checkout,
+and find the most recent commit w/o whichever bug you introduced.
+
+***
+
+Having set up my workspace, it would be nice to try to use Git to look
+at the code repository for the IMDS webmaps and review the history of
+commits over time, to get a clear sense of the pace at which the
+development of these maps has really progressed over time.

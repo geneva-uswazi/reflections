@@ -1,0 +1,23 @@
+When you initialize a repository, a new directory called .git (which is
+normally invisible to file explorers and can only be seen through the
+command line using ls -a) is created, which keeps track of metadata
+associated with all the files in that directory that records their
+versioning history.
+
+This allows you to begin working with the files in the directory within
+Git and employing the version control workflows that it makes possible.
+
+
+***
+
+A staging area is different from both a working directory and a
+repository. It represents an intermediate stage between the two. When you
+make a new repository, before you commit some files from a working
+directory into it, you first bring the files individually into the
+staging area.
+
+This allows you fine control over exactly which files are going to go
+into a given commit. Without the staging area, making a commit would roll
+up all the files in your working directory into the commit, which is very
+often not the ideal situation, as commits should be more or less
+correlated with specific logical changes.
