@@ -21,3 +21,20 @@ into a given commit. Without the staging area, making a commit would roll
 up all the files in your working directory into the commit, which is very
 often not the ideal situation, as commits should be more or less
 correlated with specific logical changes.
+
+
+***
+
+You can use the staging area to make sure you have one commit per
+logical change because using "git add" to move changes into the staging
+area introduces an additional step that provides an opportunity to
+reflect on whether your changes are commit-appropriate. 
+
+You can use "git diff --staged" to compare what is in the staging area to
+what's in your latest commit to make completely sure that what you're
+about to commit makes sense. 
+
+Similarly, you can use "git diff" w/o arguments to compare changes
+you've made in your working directory w/ what is in the staging area
+(which will be whatever you committed last time), for the same kind of
+reason.
