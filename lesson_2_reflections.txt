@@ -38,3 +38,21 @@ Similarly, you can use "git diff" w/o arguments to compare changes
 you've made in your working directory w/ what is in the staging area
 (which will be whatever you committed last time), for the same kind of
 reason.
+
+
+***
+
+Branches would be helpful in keeping your history organized anytime you
+decided to depart from the "master" branch to attempt an experimental
+feature that you weren't sure would be desirable or would work well w/
+the rest of the codebase. This would cause your history to be organized
+in a way that would reflect a distinction b/w the "main" codebase, which
+would define key basic features, and supplementary add-ons which may or
+may not prove to be necessary.
+
+Branches would also allow you to strike out on your own path with
+developing a given codebase, while another developer goes on their own
+path, or continues development on the master branch. Later, you could
+merge your changes, and if the merge doesn't work out, you could just
+roll back to the previous commit (on both branches?) just before the
+merge. This allows for independent collaboration!
