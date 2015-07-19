@@ -56,3 +56,29 @@ path, or continues development on the master branch. Later, you could
 merge your changes, and if the merge doesn't work out, you could just
 roll back to the previous commit (on both branches?) just before the
 merge. This allows for independent collaboration!
+
+
+
+***
+
+Diagrams help you visualize branch structure by allowing you to quickly
+grasp things like:
+
+-which commits are at the tip of each branch
+
+-where your currently checked-out commit (HEAD) is in relation to the
+	whole commit history
+
+-where you might be in danger of creating an unreachable commit b/c you
+	are in a detached HEAD state ... i.e. you might make a commit that
+	is not part of any branch, and if you want to keep it, you would
+	need to explicitly create a new branch at that point using
+	"git checkout -b" or "git branch new_branch_name" +
+	"git checkout new_branch_name"
+
+-which commits have which parents ... & thus, which commits are reachable
+	by "git log" & which are not
+
+-how your branches may not contain all the latest commits in the master
+	branch, b/c development of the master branch has moved on since the
+	creation of the other branches
