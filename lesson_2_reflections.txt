@@ -82,3 +82,35 @@ grasp things like:
 -how your branches may not contain all the latest commits in the master
 	branch, b/c development of the master branch has moved on since the
 	creation of the other branches
+
+
+***
+
+Merging 2 branches together causes the branch specified as the argument
+to "git merge [branch_to_merge]" to get merged into the branch that is
+currently checked out. So, really it's more like merging that branch INTO
+the branch you're on at the moment.
+
+This causes the creation of a new commit that is part of the branch that
+was merged INTO. This commit contains all the changes made in the merged-
+into branch ("master") & the branch that was merged into it.
+
+At this point, the branch that was merged into master can be deleted
+using "git branch -d [branch_to_delete]". Deleting a branch actually just
+deletes the LABEL for that branch -- the commits will still be there in
+the history (until garbage collection occurs), there is just no way for
+you to find them & get to them via "git log", b/c they would be
+unreachable (in Git terms, this means "git log" will not see them, b/c
+"git log" only sees commits by looking at HEAD, then finding its parent,
+then finding the parent of that, & so on -- when you get to a commit that
+is at a point where a branch was formed, that branch's first commit will
+be its child, not its parent, so it won't be visible to "git log"). The
+branch LABEL is the way to reach these (using "git checkout [branch]"),
+& when you delete this label (which we only CALL "deleting the branch"),
+then they become truly unreachable -- except if you know their IDs &
+garbage collection has not yet occurred.
+
+We represent a merge in a diagram as a new commit -- b/c it is -- that
+has 2 parents, the commit at the tip of the master branch before the
+merge & the commit at the tip of the branch-to-be-merged-into-master
+before the merge.
