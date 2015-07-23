@@ -114,3 +114,37 @@ We represent a merge in a diagram as a new commit -- b/c it is -- that
 has 2 parents, the commit at the tip of the master branch before the
 merge & the commit at the tip of the branch-to-be-merged-into-master
 before the merge.
+
+
+***
+
+Here are some pros & cons of Git's automatic merging vs. always doing
+merges manually.
+
+Pros:
+1. It saves you some really tedious & error-prone copying & pasting
+to consolidate various files.
+
+2. It saves you having to worry about identifying all the files that
+need to be merged, because it can automatically see which ones have
+actually been modified.
+
+3. It automatically notes in the "git log" history & in the commit
+message that a merge between 2 branches has occurred, so this potentially
+important fact about your versioniong/development history is not lost.
+
+
+Cons:
+1. It detects merge conflicts in a rudimentary way that may frequently
+warn you about differences in the branches you're merging which are not
+truly "conflicts" -- no functionality would break, it is just that Git
+has detected that similar parts of the same file were altered
+differently w/in each branch.
+
+2. Git does not actually have any way of knowing whether the branches
+you are merging are compatible or not, so it is possible for an automatic
+merge to create broken code.
+
+3. Doing manual merges probably gives you a better understanding of the
+code base & a better sense of what the developers you're collaborating
+with are doing, which could prevent errors later on.
