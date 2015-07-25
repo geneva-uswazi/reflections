@@ -2,3 +2,17 @@ You might want to use a remote repository rather than keeping all your work loca
 1. Want to share your work publicly as part of your portfolio
 2. Want to collaborate with other developers on the same codebase
 3. Want to handle some basic functions provided by Git through a graphical interface rather than the command line.
+
+
+
+***
+
+
+You might want to always pull changes manually rather than have Git
+automatically stay up-to-date w/ your remote repository because if
+your remote repository is being used collaboratively, you definitely
+do not want other people's commits and branches getting pulled into your
+repository, because this would be immensely confusing. It also means you
+can build out your repository on GitHub on multiple different computers,
+w/o generating multiple local repositories that are in different states,
+which would also be very confusing and unnecessary.
