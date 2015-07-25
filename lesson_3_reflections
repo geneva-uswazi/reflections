@@ -1,0 +1,4 @@
+You might want to use a remote repository rather than keeping all your work local when you:
+1. Want to share your work publicly as part of your portfolio
+2. Want to collaborate with other developers on the same codebase
+3. Want to handle some basic functions provided by Git through a graphical interface rather than the command line.
