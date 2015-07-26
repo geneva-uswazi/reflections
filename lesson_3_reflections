@@ -57,3 +57,17 @@ implies that you plan to take the project in a radically different
 direction or you are not necessarily working towards the same goal,
 whereas a branch is made with the expectation that at some point the
 collaborators' branches will be merged.
+
+
+
+***
+
+
+The benefit of having a copy of the last known state of the remote stored
+locally is that you can begin your own work from the latest state of the
+remote repository -- which will usually represent the latest state of
+your project that all the collaborators agree on. You can minimize the
+chances that you work will diverge from the baseline state of the project
+in a way that is conflicting or redundant. And when it comes time to push
+to the remote, fetching the last known state of the remote will let you
+resolve any potential conflicts locally before pushing.
