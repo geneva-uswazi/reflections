@@ -16,3 +16,44 @@ repository, because this would be immensely confusing. It also means you
 can build out your repository on GitHub on multiple different computers,
 w/o generating multiple local repositories that are in different states,
 which would also be very confusing and unnecessary.
+
+
+
+***
+
+
+A fork is a clone of a GitHub repository that is on GitHub. You create a
+fork when you want to take someone's repository & make a copy of it for
+yourself to work with. This will not affect the original repository, but
+the original repository's author will get credit, since the fork
+relationship will be visible on GitHub, and suggesting changes back to
+that author's original repository will be easier. You fork repositories
+as a way of taking other people's projects in new directions while
+giving them credit & leaving the possibility for suggesting that they
+incorporate your changes into their original work.
+
+A clone is just a copy of a repository. You can clone a local repository
+& create another local repository, you can clone a repository on GitHub
+to your local workspace, or you can clone a repository on GitHub & create
+another repository on GitHub (a special case called a fork). You might
+use the first 2 forms of cloning but not forking if you just want to
+take something off GitHub & work on it locally without sharing it
+publicly, and/or you want to have multiple copies of a repository
+locally for some reason.
+
+A branch occurs within the commit history of a single repository, when
+you want to take development in a different & new direction, such as
+when creating a new feature, fixing a bug, or experimenting w/ something.
+Frequently, projects will have a master branch of production-quality code
+that never breaks, a development branch where active work is happening, &
+an experimental or unique-feature branch, where you're working on things
+that you fully expect to break / that are not yet production-quality.
+Branches let you context-switch & compartmentalize your work on
+discrete aspects of your project. When collaborating with others,
+branches let you work on separate aspects of the project without
+intermingling your commits in a confusing jumble. In this context, a
+branch differs from a fork in that a fork of an entire repository
+implies that you plan to take the project in a radically different
+direction or you are not necessarily working towards the same goal,
+whereas a branch is made with the expectation that at some point the
+collaborators' branches will be merged.
