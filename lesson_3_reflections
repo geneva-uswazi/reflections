@@ -71,3 +71,33 @@ chances that you work will diverge from the baseline state of the project
 in a way that is conflicting or redundant. And when it comes time to push
 to the remote, fetching the last known state of the remote will let you
 resolve any potential conflicts locally before pushing.
+
+
+
+***
+
+
+Collaborating without using Git or GitHub would have be done using
+extremely rigorous manual file management & constant communication b/w
+you & your collaborator(s). Ideally, you would take turns working on
+building upon the latest version of the code. Having to work on code
+simultaneously would complicate things significantly, and you would have
+to keep a precise record of the additions & deletions you implemented, so
+the other person could paste them in / remove the same lines, & you would
+have to make a concerted effort to work on features that definitely had
+no dependencies.
+
+Then, whenever someone had completed a feature, they would have to send
+the exact changes to their collaborator to paste in, or vice versa,
+depending on which person is responsible for maintaining the "master"
+version of the codebase.
+
+This would be an organizational and communications nightmare & highly
+error-prone.
+
+However, no one would have to invest time in learning Git / GitHub or
+worry about the pitfalls of irreversible damage to a repository or
+creating unreachable commits. All the changes you had made would
+presumably be accessible somehow and unlikely to get destroyed by
+accidental misuse of version control, hard as they may be to dredge
+up from your manually managed organizational scheme for versioning.
