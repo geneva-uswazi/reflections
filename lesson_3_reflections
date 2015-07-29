@@ -101,3 +101,41 @@ creating unreachable commits. All the changes you had made would
 presumably be accessible somehow and unlikely to get destroyed by
 accidental misuse of version control, hard as they may be to dredge
 up from your manually managed organizational scheme for versioning.
+
+
+
+***
+
+
+Benefits of making changes in a separate branch rather than directly in
+master:
+-As long as particular commits are associated w/ a specific branch, you
+can roll them back easily if you decide against the feature you're
+developing, by simply snipping off that branch.
+
+-Your default merge commit messages will indicate that a particular
+branch was merged in (either locally or when a pull request is approved
+on GitHub), so you know that whatever changes are in that commit
+represent a logically discrete feature (but larger than just a single
+commit's worth) that needed to be developed in its own branch.
+
+-It will be easier to ensure that master retains its "purity" as your
+public-facing, production-quality code that will always work, if your
+workflow uses branches & thus insulates master from constant pushes of
+new code, perhaps some of it still somewhat experimental.
+
+Benefits of making changes directly in master:
+-The workflow for pushing & pulling is a lot less convoluted & it is
+easier to reconstruct what actually happened in the development history
+in terms of specific people's actions.
+
+-You're less likely to make a very confusing and potentially disruptive
+error, such as merging the wrong branches into one another (like if you
+have multiple non-master branches & you pull something from GitHub while
+having the wrong branch checked out in Git).
+
+-If you're on a small team and/or your development is highly linear,
+where you rarely work on more than one thing at a time & each feature is
+completed before the next one is begun, working directly in master will
+simplify your workflow without really introducing much risk or
+inconvenience.
